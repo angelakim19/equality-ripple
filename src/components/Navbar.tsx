@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
@@ -15,12 +16,8 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
-    }
+  const closeMenu = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -47,36 +44,35 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-12">
-            <button
-              onClick={() => scrollToSection("about")}
+            <Link
+              to="/about"
               className="text-dark font-semibold hover:text-accent transition-colors"
             >
               About
-            </button>
-            <button
-              onClick={() => scrollToSection("challenges")}
+            </Link>
+            <Link
+              to="/challenges"
               className="text-dark font-semibold hover:text-accent transition-colors"
             >
               Challenges
-            </button>
-            <button
-              onClick={() => scrollToSection("stories")}
+            </Link>
+            <Link
+              to="/stories"
               className="text-dark font-semibold hover:text-accent transition-colors"
             >
               Stories
-            </button>
-            <button
-              onClick={() => scrollToSection("laws")}
+            </Link>
+            <Link
+              to="/laws"
               className="text-dark font-semibold hover:text-accent transition-colors"
             >
               Laws
-            </button>
-            <Button
-              onClick={() => scrollToSection("get-involved")}
-              className="bg-accent hover:bg-accent/90 text-white rounded-full px-6"
-            >
-              Get Involved
-            </Button>
+            </Link>
+            <Link to="/#get-involved">
+              <Button className="bg-accent hover:bg-accent/90 text-white rounded-full px-6">
+                Get Involved
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -91,36 +87,39 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="lg:hidden pb-4 space-y-3">
-            <button
-              onClick={() => scrollToSection("about")}
+            <Link
+              to="/about"
+              onClick={closeMenu}
               className="block w-full text-left text-dark font-semibold py-2 hover:text-accent transition-colors"
             >
               About
-            </button>
-            <button
-              onClick={() => scrollToSection("challenges")}
+            </Link>
+            <Link
+              to="/challenges"
+              onClick={closeMenu}
               className="block w-full text-left text-dark font-semibold py-2 hover:text-accent transition-colors"
             >
               Challenges
-            </button>
-            <button
-              onClick={() => scrollToSection("stories")}
+            </Link>
+            <Link
+              to="/stories"
+              onClick={closeMenu}
               className="block w-full text-left text-dark font-semibold py-2 hover:text-accent transition-colors"
             >
               Stories
-            </button>
-            <button
-              onClick={() => scrollToSection("laws")}
+            </Link>
+            <Link
+              to="/laws"
+              onClick={closeMenu}
               className="block w-full text-left text-dark font-semibold py-2 hover:text-accent transition-colors"
             >
               Laws
-            </button>
-            <Button
-              onClick={() => scrollToSection("get-involved")}
-              className="w-full bg-accent hover:bg-accent/90 text-white rounded-full"
-            >
-              Get Involved
-            </Button>
+            </Link>
+            <Link to="/#get-involved" onClick={closeMenu}>
+              <Button className="w-full bg-accent hover:bg-accent/90 text-white rounded-full">
+                Get Involved
+              </Button>
+            </Link>
           </div>
         )}
       </div>
