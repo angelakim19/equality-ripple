@@ -35,77 +35,48 @@ const Stories = () => {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
               }`}
             >
-              <h1 className="text-5xl md:text-6xl font-bold text-accent mb-6">Real Stories, Real Impact</h1>
-              <p className="text-xl text-dark mb-16 max-w-3xl">
-                Hear from LGBTQ+ individuals who have faced workplace challenges and fought for equality.
-              </p>
-
-              {/* YouTube Stories Section */}
+              <div className="text-center max-w-3xl mx-auto">
+                <h1 className="text-5xl md:text-6xl font-bold text-accent mb-6">Real Stories, Real Impact</h1>
+                <p className="text-xl text-dark mb-16 max-w-3xl">
+                  Hear from LGBTQ+ individuals who have faced workplace challenges and fought for equality.
+                </p>
+              </div>
+              
+             
+              {/* YouTube Stories Section */}             
               <div className="mb-16">
                 <h2 className="text-4xl font-bold text-accent mb-8">Video Stories</h2>
                 <div className="grid md:grid-cols-2 gap-8">
+                  {/* Video 1 */}
                   <div className="bg-light p-6 rounded-lg shadow-md">
-                    <div className="aspect-video bg-dark/10 rounded-lg mb-4 flex items-center justify-center">
-                      <a 
-                        href="https://www.youtube.com/results?search_query=lgbt+workplace+discrimination+stories" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-accent hover:text-accent/80 flex items-center gap-2"
-                      >
-                        <span>Watch LGBTQ+ Workplace Stories</span>
-                        <ExternalLink size={20} />
-                      </a>
+                    <div className="relative pb-[56.25%] h-0 rounded-lg overflow-hidden mb-4">
+                      <iframe
+                        className="absolute top-0 left-0 w-full h-full"
+                        src="https://www.youtube.com/embed/shmihCkNfBU"
+                        title="Women's Rights in the Duterte Era"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
                     </div>
-                    <h3 className="text-xl font-bold text-dark mb-2">Workplace Discrimination Testimonials</h3>
-                    <p className="text-dark">Real stories from LGBTQ+ professionals about facing bias in the workplace.</p>
+                    <h3 className="text-xl font-bold text-dark mb-2">Analysis of Women's Rights</h3>
+                    <p className="text-dark">An analysis of the state of women's rights in the Philippines during the Duterte administration.</p>
                   </div>
 
+                  {/* Video 2 */}
                   <div className="bg-light p-6 rounded-lg shadow-md">
-                    <div className="aspect-video bg-dark/10 rounded-lg mb-4 flex items-center justify-center">
-                      <a 
-                        href="https://www.youtube.com/results?search_query=transgender+workplace+equality" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-accent hover:text-accent/80 flex items-center gap-2"
-                      >
-                        <span>Watch Trans Workplace Stories</span>
-                        <ExternalLink size={20} />
-                      </a>
+                    <div className="relative pb-[56.25%] h-0 rounded-lg overflow-hidden mb-4">
+                      <iframe
+                        className="absolute top-0 left-0 w-full h-full"
+                        src="https://www.youtube.com/embed/Md15-E4qeDU"
+                        title="Trans Workplace Stories"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
                     </div>
                     <h3 className="text-xl font-bold text-dark mb-2">Trans Professionals Speak Out</h3>
                     <p className="text-dark">Stories of resilience and the fight for workplace equality from transgender individuals.</p>
-                  </div>
-
-                  <div className="bg-light p-6 rounded-lg shadow-md">
-                    <div className="aspect-video bg-dark/10 rounded-lg mb-4 flex items-center justify-center">
-                      <a 
-                        href="https://www.youtube.com/results?search_query=lgbtq+equal+pay+stories" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-accent hover:text-accent/80 flex items-center gap-2"
-                      >
-                        <span>Watch Pay Equity Stories</span>
-                        <ExternalLink size={20} />
-                      </a>
-                    </div>
-                    <h3 className="text-xl font-bold text-dark mb-2">Fighting for Equal Pay</h3>
-                    <p className="text-dark">Personal accounts of the wage gap and fighting for fair compensation.</p>
-                  </div>
-
-                  <div className="bg-light p-6 rounded-lg shadow-md">
-                    <div className="aspect-video bg-dark/10 rounded-lg mb-4 flex items-center justify-center">
-                      <a 
-                        href="https://www.youtube.com/results?search_query=lgbtq+workplace+success+stories" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-accent hover:text-accent/80 flex items-center gap-2"
-                      >
-                        <span>Watch Success Stories</span>
-                        <ExternalLink size={20} />
-                      </a>
-                    </div>
-                    <h3 className="text-xl font-bold text-dark mb-2">Triumph and Progress</h3>
-                    <p className="text-dark">Inspiring stories of LGBTQ+ professionals thriving in inclusive workplaces.</p>
                   </div>
                 </div>
               </div>
@@ -114,67 +85,140 @@ const Stories = () => {
               <div className="mb-16">
                 <h2 className="text-4xl font-bold text-accent mb-8">Blog & Articles</h2>
                 <div className="space-y-6">
+                  
                   <article className="bg-light p-8 rounded-lg shadow-md">
-                    <h3 className="text-2xl font-bold text-dark mb-3">Breaking the Glass Ceiling: Sarah's Story</h3>
+                    <h3 className="text-2xl font-bold text-dark mb-3">
+                      <a 
+                        href="https://blogs.worldbank.org/eastasiapacific/overcoming-barriers-womens-work-philippines" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="hover:text-accent"
+                      >
+                        Overcoming Barriers to Women's Work in the Philippines – World Bank Blog
+                      </a>
+                    </h3>
                     <p className="text-dark leading-relaxed mb-4">
-                      After being passed over for promotion three times while less-qualified male colleagues advanced, 
-                      Sarah fought back. Her story led to a company-wide pay equity audit that revealed systemic bias 
-                      affecting over 200 women employees.
+                      Focuses on challenges Filipino women face in the labor market, including societal norms, pay gaps, and opportunities for inclusion.
                     </p>
-                    <p className="text-accent italic">"I knew I wasn't alone. Speaking up was scary, but staying silent was scarier."</p>
+                    <p className="text-accent italic font-semibold">
+                      "Filipino women are underrepresented in leadership despite being the majority in the workforce."
+                    </p>
                   </article>
 
                   <article className="bg-light p-8 rounded-lg shadow-md">
-                    <h3 className="text-2xl font-bold text-dark mb-3">Coming Out at Work: Marcus's Journey</h3>
+                    <h3 className="text-2xl font-bold text-dark mb-3">
+                      <a 
+                        href="https://www.linkedin.com/pulse/better-werk-queer-inclusivity-philippine-workplaces" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="hover:text-accent"
+                      >
+                        Better Werk! Queer Inclusivity in Philippine Workplaces – LinkedIn
+                      </a>
+                    </h3>
                     <p className="text-dark leading-relaxed mb-4">
-                      Marcus spent five years hiding his identity at a conservative firm. When he finally came out, 
-                      he faced subtle discrimination and exclusion. His decision to file a complaint led to policy 
-                      changes and mandatory diversity training across the organization.
+                      Explores the state of LGBTQIA+ inclusivity in Philippine workplaces, highlighting discrimination issues and steps toward equality.
                     </p>
-                    <p className="text-accent italic">"Being authentic at work shouldn't be a radical act, but sometimes it is."</p>
+                    <p className="text-accent italic font-semibold">
+                      "Creating safe and inclusive workspaces benefits everyone, not just LGBTQ+ employees."
+                    </p>
                   </article>
 
                   <article className="bg-light p-8 rounded-lg shadow-md">
-                    <h3 className="text-2xl font-bold text-dark mb-3">Transition in the Workplace: Jamie's Experience</h3>
+                    <h3 className="text-2xl font-bold text-dark mb-3">
+                      <a 
+                        href="https://www.example.com/transition-workplace-jamie" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="hover:text-accent"
+                      >
+                        Transition in the Workplace: Jamie's Experience
+                      </a>
+                    </h3>
                     <p className="text-dark leading-relaxed mb-4">
-                      When Jamie transitioned while working at a tech company, they faced questions, misgendering, 
-                      and bathroom access issues. With HR support and education, their workplace became a model 
-                      for trans-inclusive policies, helping future employees avoid similar struggles.
+                      When Jamie transitioned while working at a tech company, they faced questions, misgendering, and bathroom access issues. With HR support and education, their workplace became a model for trans-inclusive policies.
                     </p>
-                    <p className="text-accent italic">"Visibility matters. Every time I show up as myself, I'm making it easier for the next person."</p>
+                    <p className="text-accent italic font-semibold">
+                      "Visibility matters. Every time I show up as myself, I'm making it easier for the next person."
+                    </p>
                   </article>
+
                 </div>
               </div>
 
+
               {/* Events and News */}
-              <div>
+              <div className="mb-16">
                 <h2 className="text-4xl font-bold text-accent mb-8">Events & News</h2>
                 <div className="grid md:grid-cols-2 gap-8">
+
+                  {/* Pride Conference */}
                   <div className="bg-light p-6 rounded-lg shadow-md">
                     <span className="text-accent font-bold text-sm">UPCOMING EVENT</span>
                     <h3 className="text-2xl font-bold text-dark mb-3 mt-2">Pride at Work Conference 2025</h3>
                     <p className="text-dark mb-2">A national conference addressing LGBTQ+ workplace equality and inclusion strategies.</p>
                     <p className="text-dark text-sm italic">June 15-17, 2025 | Virtual & In-Person</p>
+                    <a 
+                      href="https://www.example.com/pride-at-work-2025" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-accent hover:text-accent/80 font-semibold text-sm"
+                    >
+                      Learn More
+                    </a>
                   </div>
 
+                  {/* PCW Gender Budgeting Awards */}
                   <div className="bg-light p-6 rounded-lg shadow-md">
                     <span className="text-accent font-bold text-sm">RECENT NEWS</span>
-                    <h3 className="text-2xl font-bold text-dark mb-3 mt-2">New EEOC Guidelines on Gender Identity Discrimination</h3>
-                    <p className="text-dark">Updated federal guidelines strengthen protections for transgender and non-binary employees.</p>
+                    <h3 className="text-2xl font-bold text-dark mb-3 mt-2">Gender Budgeting Awards 2025</h3>
+                    <p className="text-dark mb-2">
+                      In September 2025, the Philippine Commission on Women (PCW) recognized 123 government agencies as "Top Performers" for their 2024 Gender and Development (GAD) Budget performance.
+                    </p>
+                    <a 
+                      href="https://pcw.gov.ph/gad-budget-awards-2025" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-accent hover:text-accent/80 font-semibold text-sm"
+                    >
+                      Read More
+                    </a>
                   </div>
 
+                  {/* 18-Day VAW Campaign */}
+                  <div className="bg-light p-6 rounded-lg shadow-md">
+                    <span className="text-accent font-bold text-sm">ANNUAL CAMPAIGN</span>
+                    <h3 className="text-2xl font-bold text-dark mb-3 mt-2">18-Day Campaign to End Violence Against Women</h3>
+                    <p className="text-dark mb-2">
+                      Led by PCW and IACVAWC, the campaign continues with the theme "UNITEd for a VAW-free Philippines" (2022-2027).
+                    </p>
+                    <a 
+                      href="https://pcw.gov.ph/18-day-vaw-campaign" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-accent hover:text-accent/80 font-semibold text-sm"
+                    >
+                      Campaign Details
+                    </a>
+                  </div>
+
+                  {/* Community Dialogue on Gender Equality */}
                   <div className="bg-light p-6 rounded-lg shadow-md">
                     <span className="text-accent font-bold text-sm">COMMUNITY EVENT</span>
-                    <h3 className="text-2xl font-bold text-dark mb-3 mt-2">Workplace Allies Training</h3>
-                    <p className="text-dark mb-2">Free training for HR professionals and managers on creating LGBTQ+ inclusive workplaces.</p>
-                    <p className="text-dark text-sm italic">Monthly virtual sessions available</p>
+                    <h3 className="text-2xl font-bold text-dark mb-3 mt-2">National Dialogue on Gender Equality</h3>
+                    <p className="text-dark mb-2">
+                      A series of virtual discussions organized by NGOs and government agencies to promote awareness of gender equality policies and LGBTQ+ inclusion in workplaces.
+                    </p>
+                    <a 
+                      href="https://pcw.gov.ph/national-dialogue-gender-equality" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-accent hover:text-accent/80 font-semibold text-sm"
+                    >
+                      Join the Dialogue
+                    </a>
                   </div>
 
-                  <div className="bg-light p-6 rounded-lg shadow-md">
-                    <span className="text-accent font-bold text-sm">BREAKTHROUGH</span>
-                    <h3 className="text-2xl font-bold text-dark mb-3 mt-2">Major Corporation Achieves 100% Pay Equity</h3>
-                    <p className="text-dark">First Fortune 500 company to close gender pay gap across all positions and departments.</p>
-                  </div>
                 </div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import heroBackground from "@/assets/hero-background.jpg";
+import landingpage from '../assets/landingpage.jpg';
+
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,7 +14,7 @@ const Hero = () => {
     <section
       className="relative min-h-screen flex items-center justify-center text-white"
       style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${heroBackground})`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${landingpage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",

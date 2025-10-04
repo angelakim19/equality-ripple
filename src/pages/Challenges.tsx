@@ -34,10 +34,13 @@ const Challenges = () => {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
               }`}
             >
+              <div className="text-center max-w-3xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-accent mb-6">Challenges We Face</h1>
               <p className="text-xl text-dark mb-16 max-w-3xl">
                 Understanding the barriers to gender equality is the first step toward dismantling them.
               </p>
+              </div>
+              
 
               {/* Cultural Norms */}
               <div className="mb-16">
