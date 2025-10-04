@@ -70,7 +70,7 @@ const Navbar = () => {
             </Link>
             <Link to="/#get-involved">
               <Button className="bg-accent hover:bg-accent/90 text-white rounded-full px-6">
-                Get Involved
+                Home
               </Button>
             </Link>
           </div>
@@ -117,7 +117,7 @@ const Navbar = () => {
             </Link>
             <Link to="/#get-involved" onClick={closeMenu}>
               <Button className="w-full bg-accent hover:bg-accent/90 text-white rounded-full">
-                Get Involved
+                Home
               </Button>
             </Link>
           </div>
